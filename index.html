@@ -28,6 +28,9 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/header.css" rel="stylesheet">
+  <link href="assets/css/footer.css" rel="stylesheet">
+  <link href="assets/css/home.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Tempo - v2.1.0
@@ -58,24 +61,24 @@
           <li class="active"><a href="index.html">Inicio</a></li>
           <li class="drop-down"><a href="">Personal</a>
             <ul>
-              <li><a href="#">Personal de la DREL</a></li>
-              <li><a href="#">Departamento de Asesoría Pedagógica</a></li>
-              <li><a href="#">Departamento de Servicios Administrativos y Financieros</a></li>
+              <li><a href="personal.html?dpto=drel">Personal de la DREL</a></li>
+              <li><a href="personal.html?dpto=asesoria">Departamento de Asesoría Pedagógica</a></li>
+              <li><a href="personal.html?dpto=admin">Departamento de Servicios Administrativos y Financieros</a></li>
             </ul>
           </li>
           <li class="drop-down"><a href="">Circuitos</a>
             <ul>
-              <li><a href="#">Circuito 01</a></li>
-              <li><a href="#">Circuito 02</a></li>
-              <li><a href="#">Circuito 03</a></li>
-              <li><a href="#">Circuito 05</a></li>
-              <li><a href="#">Circuito 06</a></li>
-              <li><a href="#">Circuito 07</a></li>
-              <li><a href="#">Circuito 08</a></li>
-              <li><a href="#">Circuito 09</a></li>
+              <li><a href="circuitos.html?circuito=01">Circuito 01</a></li>
+              <li><a href="circuitos.html?circuito=02">Circuito 02</a></li>
+              <li><a href="circuitos.html?circuito=04">Circuito 04</a></li>
+              <li><a href="circuitos.html?circuito=03">Circuito 03</a></li>
+              <li><a href="circuitos.html?circuito=05">Circuito 05</a></li>
+              <li><a href="circuitos.html?circuito=06">Circuito 06</a></li>
+              <li><a href="circuitos.html?circuito=07">Circuito 07</a></li>
+              <li><a href="circuitos.html?circuito=08">Circuito 08</a></li>
+              <li><a href="circuitos.html?circuito=09">Circuito 09</a></li>
             </ul>
           </li>
-          <li><a href="">Contacto</a></li>
           <li class="link-li">
             <div class="social-links text-center text-md-right">
               <a href="https://www.facebook.com/Direcci%C3%B3n-Regional-de-Educaci%C3%B3n-de-Lim%C3%B3n-897271813938455" target="_blank" class="facebook facebook-link"><i class="bx bxl-facebook"></i></a>
@@ -101,31 +104,31 @@
     <section id="services" class="services">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0">
+          <div onclick="location.href='personal.html?dpto=drel'" class="col-md-6 col-lg-3 align-items-stretch mb-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-user-circle"></i></div>
-              <h4 class="title"><a href="">Personal del DREL</a></h4>
+              <h4 class="title"><a>Personal del DREL</a></h4>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0">
+          <div onclick="location.href='personal.html?dpto=asesoria'" class="col-md-6 col-lg-3 align-items-stretch mb-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Departamento de Asesoría Pedagógica</a></h4>
+              <h4 class="title"><a>Departamento de Asesoría Pedagógica</a></h4>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0">
+          <div onclick="location.href='personal.html?dpto=admin'" class="col-md-6 col-lg-3 align-items-stretch mb-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-money"></i></div>
-              <h4 class="title"><a href="">Departamento de Servicios Administrativos y Financieros</a></h4>
+              <h4 class="title"><a>Departamento de Servicios Administrativos y Financieros</a></h4>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 align-items-stretch mb-lg-0">
+          <div onclick="location.href='personal.html?dpto=drel'" class="col-md-6 col-lg-3 align-items-stretch mb-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title"><a href="">Circuitos</a></h4>
+              <h4 class="title"><a>Circuitos</a></h4>
             </div>
           </div>
 
@@ -149,16 +152,15 @@
               Limón Centro Ave 3 Calle 6 y 7<br>
               Costa Rica <br><br>
               <strong>Teléfonos:</strong><br>
-              2758-2005<br>2758-1917<br>2758-1882 
+              2758-2005<br>2758-1917<br>2758-1882
             </p>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Personal</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Circuitos</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Contactos</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="personal.html?dpto=drel">Inicio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="personal.html?dpto=asesoria">Personal</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="personal.html?dpto=admin">Circuitos</a></li>
             </ul>
           </div>
           <div class="row col-lg-4 col-md-6 footer-newsletter">
