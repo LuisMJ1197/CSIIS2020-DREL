@@ -118,3 +118,11 @@
 #footer img {
   height: 100px;
 }
+
+@media (min-height: 500px) {
+  #footer img {
+    height: 100px;
+    width: 45%;
+  }
+}
+

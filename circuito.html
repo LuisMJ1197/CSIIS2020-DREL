@@ -30,7 +30,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/header.css" rel="stylesheet">
     <link href="assets/css/footer.css" rel="stylesheet">
-    <link href="assets/css/circuitos.css" rel="stylesheet">
+    <link href="assets/css/circuito.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- =======================================================
@@ -99,21 +99,76 @@
             <div class="container">
                 <ol>
                     <li><a href="index.html">Inicio</a></li>
+                    <li>Circuitos</li>
                 </ol>
-                <h2 id="circuito-name">Circuitos</h2>
+                <h2 id="circuito-name">Circuito 01</h2>
+                <div id="circuito-contact" style="font-size: 0.9rem; margin: 0; display: flex; justify-content: left;">
+                    <p id="circuito-tel" style="font-size: 0.9rem; margin: 0"><strong>Teléfono de supervisión: </strong>
+                    </p>
+                    <p id="circuito-email" style="font-size: 0.9rem; margin: 0; margin-left: 16px;"><strong>Correo de
+                            supervisión: </strong></p>
+                </div>
             </div>
         </section><!-- End Breadcrumbs -->
 
         <section class="ftco-section bg-light" style="background-color: white !important;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 pr-lg-4">
-                        <div class="row">
-                            <div id="circuit-list" class="col-md-12 ftco-animate">
-
-                            </div><!-- end -->
-                        </div>
+            <div class="container" style="margin-top: 16px;">
+                <div class="circuit-info">
+                    <h4>Información del circuito</h4>
+                    <div class="row" style="margin-left: 16px;">
+                        <ul id="circuito-info-details" class="col-lg-6">
+                            <li><strong>Supervisor: </strong></li>
+                            <li><strong>Asistente de supervisión: </strong></li>
+                            <li><strong>Dirección de supervisión: </strong></li>
+                        </ul>
                     </div>
+                </div>
+                <div class="inst-list">
+                    <h4>Instituciones</h4>
+                    <details>
+                        <summary>
+                            <ul class="summary-header">
+                                <li class="titleName">Centros Educativos de Enseñanza General Básica I y II Ciclos</li>
+                                <li id="I_II_CantidadInst" class="titleValue">? instituciones</li>
+                            </ul>
+                        </summary>
+                        <div class="content">
+                            <table class="table inst-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><i class="fas fa-school" style="margin-right: 5px;"></i>Nombre
+                                            de la institución</th>
+                                        <th scope="col"><i class="fas fa-phone-alt"
+                                                style="margin-right: 5px;"></i>Teléfono</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="inst-list-rows-I_II">
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>
+                            <ul class="summary-header">
+                                <li class="titleName">Centros Educativos de Enseñanza General Básica I y II Ciclos</li>
+                                <li id="III_IV_CantidadInst" class="titleValue">? instituciones</li>
+                            </ul>
+                        </summary>
+                        <div class="content">
+                            <table class="table inst-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><i class="fas fa-school" style="margin-right: 5px;"></i>Nombre
+                                            de la institución</th>
+                                        <th scope="col"><i class="fas fa-phone-alt"
+                                                style="margin-right: 5px;"></i>Teléfono</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="inst-list-rows-III_IV">
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>
@@ -183,7 +238,7 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/not-animated-header.js"></script>
-    <script src="assets/js/circuitos.js"></script>
+    <script src="assets/js/circuito.js"></script>
 
 </body>
 

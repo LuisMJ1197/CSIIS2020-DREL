@@ -1257,55 +1257,67 @@ var circuitosAll = [
             ]
         }
     }
-];
+];  
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
 
 !(function ($) {
     "use strict";
     $(document).ready(function () {
-        circuitosAll.forEach((circuito) => {
-            $('#circuit-list').append(
+        var circuito = {};
+        var param = getParameterByName("circuito");
+        
+        circuitosAll.forEach((circuitoN) => {
+            if (circuitoN.numero == param) {
+                circuito = circuitoN;
+            }
+        });
+
+        $('#circuito-name').html(circuito.nombre);
+        $('#circuito-contact').html(
+            `
+            <p id="circuito-tel" style="font-size: 0.9rem; margin: 0"><strong>Teléfono de supervisión: </strong>${circuito.info.telefono}</p>
+                    <p id="circuito-email" style="font-size: 0.9rem; margin: 0; margin-left: 16px;"><strong>Correo de supervisión: </strong>${circuito.info.email}</p>
+            `
+        );
+        $('#circuito-info-details').html(
+            `
+            <li><strong>Supervisor: </strong>${circuito.info.supervisor}</li>
+            <li><strong>Asistente de supervisión: </strong>${circuito.info.asistente}</li>
+            <li><strong>Dirección de supervisión: </strong>${circuito.info.direccion}</li>
+            `
+        );
+        $('#I_II_CantidadInst').html(circuito.instituciones.I_II_Ciclo.length + " instituciones");
+        circuito.instituciones.I_II_Ciclo.forEach((inst) => {
+            $('#inst-list-rows-I_II').append(
                 `
-                <div class="job-post-item p-4 d-block d-lg-flex align-items-center">
-                <div class="one-third mb-4 mb-md-0">
-                <div class="job-post-item-header d-block d-md-flex d-flex">
-                    <h5 class="text-black">${circuito.nombre}</h5>
-                </div>
-                <div class="circuito-data" style="display: flex;">
-                    <div>
-                        <div class="job-post-item-body d-block d-md-flex">
-                            <div>
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Cantón: </span>
-                                <span class="data">${circuito.canton}</span>
-                            </div>
-                        </div>
-                        <div class="job-post-item-body d-block d-md-flex">
-                            <div><i class="fas fa-school"></i> <span>Cantidad de instituciones: </span><span
-                                class="data">${circuito.instituciones.I_II_Ciclo.length + circuito.instituciones.III_IV_Ciclo.length}</span></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="job-post-item-body d-block d-md-flex">
-                            <div><i class="fas fa-phone-alt"></i> <span>Teléfono: </span><span
-                                class="data">${circuito.info.telefono}</span></div>
-                        </div>
-                        <div class="job-post-item-body d-block d-md-flex">
-                            <div><i class="fas fa-at"></i> <span>Email: </span><span
-                                class="data">${circuito.info.email}</span></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="job-post-item-body d-block d-md-flex">
-                            <div>
-                                <button  onclick="location.href='circuito.html?circuito=${circuito.numero}'">Ver instituciones</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr/>
-                </div>
-            </div>`
+                <tr class="inst-item">
+                    <th scope="row" class="inst-name">${inst.nombre}</th>
+                    <td class="inst-tel">${inst.telefono}</td>
+                </tr>
+                `
             );
         });
+
+        $('#III_IV_CantidadInst').html(circuito.instituciones.III_IV_Ciclo.length + " instituciones");
+        circuito.instituciones.III_IV_Ciclo.forEach((inst) => {
+            $('#inst-list-rows-III_IV').append(
+                `
+                <tr class="inst-item">
+                    <th scope="row" class="inst-name">${inst.nombre}</th>
+                    <td class="inst-tel">${inst.telefono}</td>
+                </tr>
+                `
+            );
+        });
+
+        
     });
 })(jQuery);
