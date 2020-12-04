@@ -1294,8 +1294,8 @@ function getParameterByName(name, url) {
         $('#circuito-name').html(circuito.nombre);
         $('#circuito-contact').html(
             `
-            <p id="circuito-tel" style="font-size: 0.9rem; margin: 0"><strong>Teléfono de supervisión: </strong>${circuito.info.telefono}</p>
-                    <p id="circuito-email" style="font-size: 0.9rem; margin: 0; margin-left: 16px;"><strong>Correo de supervisión: </strong>${circuito.info.email}</p>
+            <p id="circuito-tel"><strong>Teléfono de supervisión: </strong>${circuito.info.telefono}</p>
+            <p id="circuito-email"><strong>Correo de supervisión: </strong>${circuito.info.email}</p>
             `
         );
         

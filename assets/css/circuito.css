@@ -149,3 +149,32 @@ tr.inst-item .inst-name {
 tr.inst-item .inst-tel {
   width: 35%;
 }
+
+#circuito-contact {
+  font-size: 0.9rem; 
+  margin: 0; 
+  display: flex; 
+  justify-content: left;
+}
+
+#circuito-contact #circuito-tel {
+  font-size: 0.9rem; 
+  margin: 0;
+}
+
+#circuito-contact #circuito-email {
+  font-size: 0.9rem;
+  margin: 0;
+  margin-left: 16px;
+}
+
+@media (orientation: portrait) {
+  #circuito-contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #circuito-contact #circuito-email {
+    margin-left: 0;
+  }
+}
