@@ -8,6 +8,7 @@
 }
 
 #header .logo {
+  position: relative;
   font-size: 32px;
   margin: 0;
   padding: 0;
@@ -22,7 +23,7 @@
 }
 
 #header .logo img {
-  max-height: 40px;
+  height: 40px;
 }
 
 .header-not-scrolled, .header-scrolled, #header.header-inner-pages {
@@ -33,7 +34,6 @@
 
 .header-not-scrolled, .header-scrolled .logo a, #header.header-inner-pages .logo a {
   color: #493c3e;
-
 }
 
 .header-scrolled .logo #mep-logo, #header.header-inner-pages .logo #mep-logo{

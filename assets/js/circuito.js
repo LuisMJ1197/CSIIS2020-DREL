@@ -1258,6 +1258,11 @@ var circuitosAll = [
         }
     }
 ];  
+
+/* 
+    Reads parameters from url.
+    Returns the value of parameter named [name]
+*/
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');
@@ -1268,9 +1273,14 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
+/* 
+    According to the param value, it will load the data.
+    So, if the param circuito=01, it will load the data of Circuito 01
+*/
 !(function ($) {
     "use strict";
     $(document).ready(function () {
+        // Reads the param
         var circuito = {};
         var param = getParameterByName("circuito");
         
@@ -1280,6 +1290,7 @@ function getParameterByName(name, url) {
             }
         });
 
+        // Sets the data of circuit
         $('#circuito-name').html(circuito.nombre);
         $('#circuito-contact').html(
             `
@@ -1287,6 +1298,7 @@ function getParameterByName(name, url) {
                     <p id="circuito-email" style="font-size: 0.9rem; margin: 0; margin-left: 16px;"><strong>Correo de supervisión: </strong>${circuito.info.email}</p>
             `
         );
+        
         $('#circuito-info-details').html(
             `
             <li><strong>Supervisor: </strong>${circuito.info.supervisor}</li>
@@ -1294,6 +1306,8 @@ function getParameterByName(name, url) {
             <li><strong>Dirección de supervisión: </strong>${circuito.info.direccion}</li>
             `
         );
+
+        // Loads the data of I and II Cycle
         $('#I_II_CantidadInst').html(circuito.instituciones.I_II_Ciclo.length + " instituciones");
         circuito.instituciones.I_II_Ciclo.forEach((inst) => {
             $('#inst-list-rows-I_II').append(
@@ -1306,6 +1320,7 @@ function getParameterByName(name, url) {
             );
         });
 
+        // Loads the data of III and IV Cycle
         $('#III_IV_CantidadInst').html(circuito.instituciones.III_IV_Ciclo.length + " instituciones");
         circuito.instituciones.III_IV_Ciclo.forEach((inst) => {
             $('#inst-list-rows-III_IV').append(
