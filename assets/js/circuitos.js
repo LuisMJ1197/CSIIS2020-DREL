@@ -4,7 +4,7 @@ var circuitosAll = [
         nombre: "Circuito Escolar 01",
         canton: "Limón",
         info: {
-            supervisor: "Dr. Erick Chevéz Rodríguez",
+            supervisor: "María Patricia Hernández Molina",
             asistente: "No asignado.",
             direccion: "Limón Centro Ave 2 Calle 4 y 5",
             telefono: "2758-0179",
@@ -118,7 +118,7 @@ var circuitosAll = [
         nombre: "Circuito Escolar 02",
         canton: "Limón",
         info: {
-            supervisor: "Dr. Juan Luis Matarrita Thompson",
+            supervisor: "Msc. Juan Luis Matarrita Thompson",
             asistente: "No asignado.",
             direccion: "Barrio Cieneguita, Escuela Balvanero Vargas Molina",
             telefono: "2758-2530",
@@ -402,7 +402,7 @@ var circuitosAll = [
         nombre: "Circuito Escolar 04",
         canton: "Siquirres",
         info: {
-            supervisor: "MSc. Oky Cambronero",
+            supervisor: "MSc. Oky Cambronero Mesén",
             asistente: "MSc. Ilamy Barret",
             direccion: "Siquirres, contiguo al CTP Padre Roberto Evans Saunders",
             telefono: "2768-5436",
@@ -540,7 +540,7 @@ var circuitosAll = [
         nombre: "Circuito Escolar 05",
         canton: "Siquirres",
         info: {
-            supervisor: "Jorlene Rodríguez Quirós",
+            supervisor: "Msc. Jorleny Rodríguez Quirós",
             asistente: "Arnoldo Dunkley Salazar",
             direccion: "Siquirres, costado Norte de la Escuela Justo Antonio Facio",
             telefono: "2768-7141",
@@ -860,7 +860,7 @@ var circuitosAll = [
         nombre: "Circuito Escolar 07",
         canton: "Limón",
         info: {
-            supervisor: "Dra. Jacqueline Jara Bonilla",
+            supervisor: "Msc. Jacqueline Jara Bonilla",
             asistente: "MSc. Helen Mora Blanco",
             direccion: "Liverpool, Instalaciones del CTP Liverpool",
             telefono: "No disponible.",
@@ -958,7 +958,7 @@ var circuitosAll = [
         nombre: "Circuito Escolar 08",
         canton: "Talamanca",
         info: {
-            supervisor: "MsC. Víctor Chacón Chaves",
+            supervisor: "Msc. Víctor Chacón Chaves",
             asistente: "Licda. Kattia Umaña Delgado",
             direccion: "Cahuita, costado Sur de la Escuela Excelencia de Cahuita",
             telefono: "2750-0754",
@@ -1104,7 +1104,7 @@ var circuitosAll = [
         nombre: "Circuito Escolar 09",
         canton: "Matina",
         info: {
-            supervisor: "Guillermo Waless Cambell",
+            supervisor: "Msc. Guillermo Waless Cambell",
             asistente: "Omar Sánchez Acuña",
             direccion: "Bataán, contiguo a la Esc. de Excelencia Bataán",
             telefono: "2718-6207",
